@@ -25,10 +25,10 @@
 # ============================================================
 
 # Path to your virtual environment
-VENV_PATH="$WORK/uvpf_env"  # CHANGE THIS!
+VENV_PATH="/home/shinikoushal.cse24.itbhu/Shini/UVPFL/uvpf_env"
 
 # Path to UVPFL project directory
-PROJECT_PATH="$WORK/UVPFL"  # CHANGE THIS!
+PROJECT_PATH="/home/shinikoushal.cse24.itbhu/Shini/UVPFL"
 
 # CUDA version (Paramshivay specific)
 CUDA_VERSION="12.6.3"  # Default on Paramshivay
