@@ -1,12 +1,15 @@
 #!/bin/bash
-#SBATCH --job-name=uvpfl_train
-#SBATCH --output=uvpfl_%j.out
-#SBATCH --error=uvpfl_%j.err
-#SBATCH --gres=gpu:1
-#SBATCH --time=24:00:00
-#SBATCH --mem=32G
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=8
+#SBATCH --gres=gpu:1
 #SBATCH --partition=gpu
+#SBATCH --job-name=uvpfl_train
+#SBATCH --error=uvpfl_%j.err
+#SBATCH --output=uvpfl_%j.out
+#SBATCH --time=24:00:00
+#SBATCH --mail-type=end
+ulimit -s unlimited
 
 # ============================================================
 # UVPFL Training Job Script for Paramshivay Supercomputer
