@@ -10,7 +10,9 @@ pandas>=1.5.0
 scipy>=1.9.0
 
 # Computer Vision
-opencv-python>=4.6.0
+# Use opencv-python-headless for headless servers (HPC clusters)
+# Use opencv-python for systems with GUI support
+opencv-python-headless>=4.6.0
 Pillow>=9.0.0
 
 # Machine Learning
