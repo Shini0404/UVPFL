@@ -32,7 +32,12 @@ def verify_environment():
     # Keras
     try:
         from tensorflow import keras
-        print(f"✅ Keras: {keras.__version__}")
+        try:
+            keras_version = keras.__version__
+        except AttributeError:
+            # In TensorFlow 2.15+, Keras version is same as TensorFlow
+            keras_version = tf.__version__
+        print(f"✅ Keras: {keras_version}")
     except ImportError as e:
         errors.append(f"Keras: {e}")
         print(f"❌ Keras: Not installed")
